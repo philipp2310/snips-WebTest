@@ -17,3 +17,4 @@ A testing tool for Snips. Simulate conversations without talking or listening, j
 - JavaScript activated
 
 # Feel free to report any issues or send me feedback!
+https://forum.snips.ai/t/webtest-test-your-assistant-on-a-local-website-without-talking/801
