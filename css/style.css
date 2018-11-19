@@ -1,0 +1,263 @@
+/**
+ * Copyright 2013 dc-square GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * @author: Christoph Schäbel
+ *
+ */
+html, body {
+	background-color: white;
+	min-height: 100%;
+    font-family: Apercu,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    margin: 0 auto;
+    max-width: 840px;
+   	background-color: #f2f3f6;
+    min-height:100%;
+    display:block;
+}
+html{
+	background-color:#ffffff;
+}
+#body{
+   visibility:hidden;
+}
+.messagesTop {
+    background-color: #f2f2f2;
+    width: 180px;
+}
+#messEdit{
+	width: 90%;
+	min-height:200px;
+}
+.disc li {
+    list-style-type: none;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    margin-left: 10px;	
+}
+
+.messageText {
+    border: solid 1px #cccccc;
+}
+
+.empty {
+    clear: both;
+    height: 20px;
+}
+
+#connectButton, #disconnectButton {
+    margin-top: 17px;
+}
+div.headspace{
+	height:70px;
+	clear:both;
+}
+.onlymouseover{
+	opacity: 0;
+}
+.button:hover .onlymouseover{
+	opacity: 100;
+}
+.button{
+	color:#FFFFFF;
+    margin: 10px;
+    width: 120px;
+    align: center;
+    background-color: #001EFF;
+    display: block;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 10px;
+    float:right;
+    fill:currentColor;
+}
+.button:hover{
+	color:#DDDDDD;
+    box-shadow: 5px 3px 2px #DDDDDD;
+}
+.setup {
+ float:left;
+ width:50%;
+ min-width:150px;
+ max-width:350px;
+}
+
+.row {
+ clear:both;
+}
+
+.rowInp{
+ margin: 5px;
+}
+
+label {
+ display:block;
+ width:22%;
+ min-width:100px;
+ max-width:200px;
+ float: left;
+ clear: left;
+ padding: 10px;
+}
+input {
+ width:60%;
+ min-width:100px;
+ max-width:200px;
+ float: left;
+ padding: 8px;
+ border: 1px solid #d5d6e0;
+ border-radius: .328rem;
+}
+
+input.grayed {
+	color:#666666;
+}
+textarea{
+    height: 5em;
+    background-color: white;
+    margin-left: 20px;
+    width: 90%;
+    float: left;
+    padding: 10px;
+   	border: 1px solid #d5d6e0;
+    border-radius: .328rem;
+}
+
+a.toplink{
+    margin: 5px;
+    vertical-align: top;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#toplinkline{
+	float: left;
+    padding-top: 20px;
+}
+
+a.toplink svg{
+	padding:3px;
+}
+#header{
+	background-color:#001EFF;
+    height: 4.2857em;
+    padding-top: 3px;
+    position:fixed;
+    width:100%;
+    color:#FFFFFF;
+    display: block;
+    top: 0;
+    left: 0;
+    min-width:490px;
+}
+div #lastTTS{
+    background-color: white;
+    margin-left: 20px;
+    width: 90%;
+    float: left;
+	height: 5em;
+    padding: 10px;
+   	border: 1px solid #d5d6e0;
+    border-radius: .328rem;
+}
+#hcontent > img{
+	float:left;
+	margin: 20px;
+}
+#hcontent > h1{
+	margin:10px;
+	float:right;
+}
+
+.date, .topicM, .retain {
+    color: #bababa;
+    font-size: 12px;
+}
+
+form.connectCont {
+    width: 90%;
+    margin: auto;
+}
+
+div.messageText {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.row .messLine div.row, .row .subLine div.row {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#connectionStatus {
+    margin-top: 20px;
+    width: 24px;
+    height: 24px;
+    float: right;
+}
+#hcontent{
+	max-width:840px;
+	width: 100%;
+	margin:auto;
+}
+#contentMain {
+	display: none;
+}
+#readmeMain {
+	display: none;
+}
+body.notconnected #connectionStatus {
+    background-image: url('../assets/disconnected.png');
+}
+body.notconnected #connectionStatus:hover {
+    background-image: url('../assets/disconnected_h.png');
+}
+body.connected #connectionStatus {
+    background-image: url('../assets/connected.png');
+}
+body.connected #connectionStatus:hover {
+    background-image: url('../assets/connected_h.png');
+}
+body.notconnected #disconnectButton {
+    display: none;
+}
+body.connected #disconnectButton {
+    display: inline-block;
+}
+body.notconnected #connectButton {
+    display: inline-block;
+}
+body.connected #connectButton {
+    display: none;
+}
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.break-words {
+    word-wrap: break-word;
+}
