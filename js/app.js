@@ -22,12 +22,12 @@ function wakeWord(){
 }
 function pretendInput(){
 	websocketclient.publish('hermes/asr/textCaptured'
-			,'{"text":"'+$( '#publishPayload' ).val()+'","likelihood":0.50297457,"tokens":[{"value":"'+$( '#publishPayload' ).val()+'","confidence":1,"range_start":0,"range_end":8,"time":{"start":0.08803082,"end":1.6948999}}],"seconds":2.0,"siteId":"'+$( '#siteId').val()+'","sessionId":"'+$( '#sessionId' ).val()+'"}'
+			,'{"text":"'+$( '#publishPayload' ).val()+'","likelihood":0.50297457,"tokens":[{"value":"'+$( '#publishPayload' ).val()+'","confidence":1,"rangeStart":0,"rangeEnd":8,"time":{"start":0.08803082,"end":1.6948999}}],"seconds":2.0,"siteId":"'+$( '#siteId').val()+'","sessionId":"'+$( '#sessionId' ).val()+'"}'
 			,0,false)
 }
 function testIntent(){
 	websocketclient.publish('hermes/nlu/query'
-			,'{"input":"'+$( '#publishPayload' ).val()+'","asrTokens":[{"value":"'+$( '#publishPayload' ).val()+'","confidence":1,"range_start":0,"range_end":8,"time":{"start":0.08803082,"end":1.6948999}}],"intentFilter":null,"id":"dontmatter","sessionId":"'+$( '#sessionId' ).val()+'"}'
+			,'{"input":"'+$( '#publishPayload' ).val()+'","asrTokens":[{"value":"'+$( '#publishPayload' ).val()+'","confidence":1,"rangeStart":0,"rangeEnd":8,"time":{"start":0.08803082,"end":1.6948999}}],"intentFilter":null,"id":"dontmatter","sessionId":"'+$( '#sessionId' ).val()+'"}'
 			,0,false)
 }
 function testTTS(){
