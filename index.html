@@ -248,7 +248,14 @@ Modified in 2018 for usage as Snips Test tool by
 			return text;
 		}
 		function subPre() {
-			websocketclient.subscribe("hermes/#", 0, 8899);
+			websocketclient.subscribe("hermes/hotword/#", 0, 8899);
+			websocketclient.subscribe("hermes/asr/#", 0, 8899);
+			websocketclient.subscribe("hermes/dialogueManager/#", 0, 8899);
+			websocketclient.subscribe("hermes/nlu/#", 0, 8899);
+			websocketclient.subscribe("hermes/intent/#", 0, 8899);
+			websocketclient.subscribe("hermes/tts/#", 0, 8899);
+			websocketclient.subscribe("hermes/audioServer/+/playBytes/#", 0, 8899);
+			websocketclient.subscribe("hermes/audioServer/+/playFinished", 0, 8899);
 		}
 		websocketclient.render.hide('speakBut')
 		//$(document).foundation();
